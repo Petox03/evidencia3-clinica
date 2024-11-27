@@ -9,7 +9,7 @@ class Treatment extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['pet_id', 'medicine_id', 'amount', 'administration_time'];
+    protected $fillable = ['pet_id', 'medicine_id', 'dose', 'administration_time'];
 
     // Relación con el modelo Pet
     public function pet()

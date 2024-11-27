@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Pet::class);
             $table->foreignIdFor(Medicine::class);
-            $table->integer('amount');
+            $table->integer('dose');
             $table->time('administration_time');
             $table->timestamps();
         });

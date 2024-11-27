@@ -9,9 +9,9 @@ class PetTypeSeeder extends Seeder
 {
     public function run()
     {
-        PetType::create(['type' => 'Dog']);
-        PetType::create(['type' => 'Cat']);
-        PetType::create(['type' => 'Bird']);
+        PetType::create(['type' => 'Perro']);
+        PetType::create(['type' => 'Gato']);
+        PetType::create(['type' => 'Ave']);
         // Agrega más tipos de mascotas según sea necesario
     }
 }

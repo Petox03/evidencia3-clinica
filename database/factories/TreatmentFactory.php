@@ -13,7 +13,7 @@ class TreatmentFactory extends Factory
         return [
             'pet_id' => \App\Models\Pet::all()->random()->id,
             'medicine_id' => \App\Models\Medicine::all()->random()->id,
-            'amount' => $this->faker->numberBetween(1, 3),
+            'dose' => $this->faker->numberBetween(1, 3),
             'administration_time' => $this->faker->time,
         ];
     }
