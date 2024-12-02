@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('treatments', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Pet::class)->constrained()->ondelete('cascade');
-            $table->foreignIdFor(Medicine::class)->constrained()->ondelete('cascade');
+            $table->foreignIdFor(Pet::class)->constrained()->onDelete('cascade');
+            $table->foreignIdFor(Medicine::class)->constrained()->onDelete('cascade');
             $table->integer('dose');
             $table->time('administration_time');
             $table->boolean('is_in_treatment')->default(true);
