@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('pets', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignIdFor(PetType::class)->onDelete('cascade');
+            $table->foreignIdFor(PetType::class)->constrained()->ondelete('cascade');
             $table->integer('age');
-            $table->foreignIdFor(Customer::class)->onDelete('cascade');
+            $table->foreignIdFor(Customer::class)->constrained()->ondelete('cascade');
             $table->boolean('is_hospitalized')->default(true);
             $table->timestamps();
         });
