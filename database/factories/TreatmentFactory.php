@@ -15,6 +15,7 @@ class TreatmentFactory extends Factory
             'medicine_id' => \App\Models\Medicine::all()->random()->id,
             'dose' => $this->faker->numberBetween(1, 3),
             'administration_time' => $this->faker->time,
+            'is_in_treatment' => true,
         ];
     }
 }

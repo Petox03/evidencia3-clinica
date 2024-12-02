@@ -11,6 +11,8 @@ class Treatment extends Model
 
     protected $fillable = ['pet_id', 'medicine_id', 'dose', 'administration_time'];
 
+    protected $attributes = [ 'is_in_treatment' => true, ];
+
     // Relación con el modelo Pet
     public function pet()
     {

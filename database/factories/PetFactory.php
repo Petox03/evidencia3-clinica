@@ -15,6 +15,7 @@ class PetFactory extends Factory
             'pet_type_id' => \App\Models\PetType::all()->random()->id,
             'age' => $this->faker->numberBetween(1, 15),
             'customer_id' => \App\Models\Customer::all()->random()->id,
+            'is_hospitalized' => true
         ];
     }
 }

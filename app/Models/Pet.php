@@ -10,6 +10,7 @@ class Pet extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'pet_type_id', 'age', 'customer_id'];
+    protected $attributes = [ 'is_hospitalized' => false, ];
 
     // Relación con el modelo PetType
     public function petType()

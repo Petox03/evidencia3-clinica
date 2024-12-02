@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('treatments', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Pet::class);
-            $table->foreignIdFor(Medicine::class);
+            $table->foreignIdFor(Pet::class)->onDelete('cascade');
+            $table->foreignIdFor(Medicine::class)->onDelete('cascade');
             $table->integer('dose');
             $table->time('administration_time');
+            $table->boolean('is_in_treatment')->default(true);
             $table->timestamps();
         });
     }
