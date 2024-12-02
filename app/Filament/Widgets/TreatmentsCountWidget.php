@@ -12,6 +12,8 @@ class TreatmentsCountWidget extends BaseWidget
 {
     public $count;
 
+    protected static ?int $sort = 0;
+
     public function mount()
     {
         // Contar los tratamientos no finalizados
@@ -21,10 +23,15 @@ class TreatmentsCountWidget extends BaseWidget
     protected function getStats(): array
     {
         $petsCount = Pet::count();
+        $hospitalizedPetsCount = Pet::where('is_hospitalized', true)->count();
         $customersCount = Customer::count();
 
         return [
-            Stat::make('Tratamientos', $this->count)
+            Stat::make('Pacientes', $hospitalizedPetsCount)
+                ->description('Cantidad de mascotas internadas')
+                ->descriptionIcon('heroicon-o-square-3-stack-3d'),
+            
+                Stat::make('Tratamientos', $this->count)
                 ->description('Cantidad de tratamientos sin completar')
                 ->descriptionIcon('heroicon-o-beaker'),
 
