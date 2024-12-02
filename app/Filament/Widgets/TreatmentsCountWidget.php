@@ -30,8 +30,8 @@ class TreatmentsCountWidget extends BaseWidget
             Stat::make('Pacientes', $hospitalizedPetsCount)
                 ->description('Cantidad de mascotas internadas')
                 ->descriptionIcon('heroicon-o-square-3-stack-3d'),
-            
-                Stat::make('Tratamientos', $this->count)
+
+            Stat::make('Tratamientos', $this->count)
                 ->description('Cantidad de tratamientos sin completar')
                 ->descriptionIcon('heroicon-o-beaker'),
 
